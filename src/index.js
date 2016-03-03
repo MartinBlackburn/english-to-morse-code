@@ -1,4 +1,4 @@
-var dot = '.',
+var dot = '.',q3eqeqweqeqweqe
     dash = '-',
     divide = '/';
     
