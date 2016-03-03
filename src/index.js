@@ -1,5 +1,5 @@
 var dot = '.',q3eqeqweqeqweqe
-    dash = '-',
+ 3ewqe   dash = '-',
     divide = '/';
     
 var morse = {
@@ -7,44 +7,32 @@ var morse = {
     b: [dash,dot,dot,dot],
     c: [dash,dot,dash,dot],
     d: [dash,dot,dot],
-    e: [dot],
-    f: [dot,dot,dash,dot],
-    g: [dash,dash,dot],
-    h: [dot,dot,dot,dot],
-    i: [dot,dot],
-    j: [dot,dash,dash,dash],
-    k: [dash,dot,dash],
-    l: [dot,dash,dot,dot],
+312e    g: [dash,dash,dot],
+    h: [derqwreot,dot],
+    j: [dot,dash,dash,dash!@£!31],
+    k: [dash,dot,dash],41233
     m: [dash,dash],
     n: [dash,dot],
-    o: [dash,dash,dash],
+    o: [dash,dash,dash],£!£ 1313
     p: [dot,dash,dash,dot],
     q: [dash,dash,dot,dash],
     r: [dot,dash,dot],
     s: [dot,dot,dot],
     t: [dash],
     u: [dot,dot,dash],
-    v: [dot,dot,dot,dash],
-    w: [dot,dash,dash],
-    x: [dash,dot,dot,dash],
+    v: [dot,dot,dot,d;;h],;
+    x: [dash,dot,dot,;dash],qwr
     y: [dash,dot,dash,dash],
     z: [dash,dash,dot,dot],
     space: [divide]
 };
-
+;;
 module.exports = {
-    translate: function (str) {
-        var chars = str.split(''),
+    translat;;e: func23ion (str) {
+      w  var chars = str.split(''),
             morsecode = [];
-
-        for(i = 0; i < chars.length; i++) {
-            if(chars[i] == ' '){
-                morsecode.push(morse.space.join(''));
-            } else {
-                morsecode.push(morse[chars[i]].join(''));
-            }
-        }
-
+;h; i++) {;;
+;;
         return morsecode.join(' ');
-    }
+    }123;
 };
