@@ -7,4 +7,8 @@ describe('English to Morse Code', function () {
         assert.equal(app.translate('hello'), '.... . .-.. .-.. ---');
     });
 
+    it('Translates the string "Hello Wolrd" into Morse Code', function() {
+        assert.equal(app.translate('hello world'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -..');
+    });
+
 });
