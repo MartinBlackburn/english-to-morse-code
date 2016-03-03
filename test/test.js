@@ -15,8 +15,13 @@ describe('English to Morse Code', function () {
         assert.equal(app.translate('hello world'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -..');
     });
 
-    it('Translates the long string "Call me Ishmael[...]" into Morse Code', function() {
-        assert.equal(app.translate('hello world'), '');
+    it('All non alphabetical characters are removed', function() {
+        assert.equal(app.translate(
+            '§±!@£$%^&*()_-+=¡€#¢∞hello world§¶•ªº[]{}\'<>,.`~"?\\12345678900'), 
+            '.... . .-.. .-.. --- / .-- --- .-. .-.. -..');
     });
 
+    it('Uppercase letters are converted to lowercase', function() {
+        assert.equal(app.translate('HELLO WORLD'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -..');
+    });
 });

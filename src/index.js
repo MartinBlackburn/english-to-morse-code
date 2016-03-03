@@ -34,7 +34,10 @@ var morse = {
 
 module.exports = {
     translate: function (str) {
-        var chars = str.split(''),
+        var chars = str
+            .toLowerCase()
+            .replace(/[^A-Za-z\s]/g, '')
+            .split(''),
             morsecode = [];
 
         for(i = 0; i < chars.length; i++) {
