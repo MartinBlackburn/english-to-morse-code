@@ -1,0 +1,22 @@
+{
+  "name": "english-to-morse-code",
+  "version": "1.0.0",
+  "description": "Because why not?",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartinBlackburn/english-to-morse-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartinBlackburn/english-to-morse-code/issues"
+  },
+  "homepage": "https://github.com/MartinBlackburn/english-to-morse-code#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
