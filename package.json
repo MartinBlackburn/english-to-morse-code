@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "compile": "babel src --out-dir lib",
-    "test": "npm run compile && mocha --compilers js:babel-core/register"
+    "test": "mocha --compilers js:babel-core/register"
   },
   "repository": {
     "type": "git",
