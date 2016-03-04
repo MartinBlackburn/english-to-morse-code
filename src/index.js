@@ -43,7 +43,7 @@ class MorseCodeTranslator
             8: ["-","-","-",".","."],
             9: ["-","-","-","-","."],
             0: ["-","-","-","-","-"],
-            space: ["/"]
+            ' ': ["/"]
         };
     }
 
@@ -61,11 +61,7 @@ class MorseCodeTranslator
             morsecode = [];
 
         for(let i = 0; i < chars.length; i++) {
-            if(chars[i] == ' '){
-                morsecode.push(this._morse.space.join(''));
-            } else {
-                morsecode.push(this._morse[chars[i]].join(''));
-            }
+            morsecode.push(this._morse[chars[i]].join(''));
         }
 
         return morsecode.join(' ');
