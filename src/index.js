@@ -1,8 +1,8 @@
-var dot = '.',
-    dash = '-',
-    divide = '/';
+const dot = '.';
+const dash = '-';
+const divide = '/';
 
-var morse = {
+const morse = {
     a: [dot,dash],
     b: [dash,dot,dot,dot],
     c: [dash,dot,dash,dot],
@@ -42,21 +42,21 @@ var morse = {
     space: [divide]
 };
 
-module.exports = {
-    translate: function (str) {
-        var chars = str
+export default {
+    translate(str) => {
+        let chars = str
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
             .split(''),
             morsecode = [];
             
-        chars.map( char => {
-            if(char == ' '){
+        chars.map(char => {
+            if (char == ' ') {
                 morsecode.push(morse.space.join(''));
             } else {
                 morsecode.push(morse[char].join(''));
             }
-        } );
+        });
 
         return morsecode.join(' ');
     }
