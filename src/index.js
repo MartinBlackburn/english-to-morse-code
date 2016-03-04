@@ -1,7 +1,3 @@
-const dot = '.';
-const dash = '-';
-const divide = '/';
-
 import morse from './morse';
 
 export default {
