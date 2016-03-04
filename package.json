@@ -4,7 +4,9 @@
   "description": "Because why not?",
   "main": "src/index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "test:es6": "mocha --compilers js:babel-core/register",
+    "transpile": "babel src --out-dir lib"
   },
   "repository": {
     "type": "git",
