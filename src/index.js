@@ -3,17 +3,13 @@ import morse from './morse';
 export default (str) => {
     let chars = str
         .toLowerCase()
-        .replace(/[^a-z0-9\s]/g, '')
+        .replace(/[^A-Za-z\s]/g, '')
+        .replace(/  +/g, ' ')
         .split(''),
         morsecode = [];
 
     chars.map(char => {
-        if (char == ' ') {
-            morsecode.push(morse.space.join(''));
-        } else {
-            morsecode.push(morse[char].join(''));
-        }
+         morsecode.push(morse[char].join(''));
     });
-
     return morsecode.join(' ');
-}
+};
