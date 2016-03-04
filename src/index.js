@@ -49,14 +49,14 @@ module.exports = {
             .replace(/[^a-z0-9\s]/g, '')
             .split(''),
             morsecode = [];
-
-        for(i = 0; i < chars.length; i++) {
-            if(chars[i] == ' '){
+            
+        chars.map( char => {
+            if(char == ' '){
                 morsecode.push(morse.space.join(''));
             } else {
-                morsecode.push(morse[chars[i]].join(''));
+                morsecode.push(morse[char].join(''));
             }
-        }
+        } );
 
         return morsecode.join(' ');
     }
