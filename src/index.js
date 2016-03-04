@@ -5,7 +5,7 @@ const divide = '/';
 import morse from './morse';
 
 export default {
-    translate(str) => {
+    translate(str) {
         let chars = str
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
