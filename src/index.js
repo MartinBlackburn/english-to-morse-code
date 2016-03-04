@@ -1,63 +1,73 @@
-var dot = '.',
-    dash = '-',
-    divide = '/';
+"use strict";
 
-var morse = {
-    a: [dot,dash],
-    b: [dash,dot,dot,dot],
-    c: [dash,dot,dash,dot],
-    d: [dash,dot,dot],
-    e: [dot],
-    f: [dot,dot,dash,dot],
-    g: [dash,dash,dot],
-    h: [dot,dot,dot,dot],
-    i: [dot,dot],
-    j: [dot,dash,dash,dash],
-    k: [dash,dot,dash],
-    l: [dot,dash,dot,dot],
-    m: [dash,dash],
-    n: [dash,dot],
-    o: [dash,dash,dash],
-    p: [dot,dash,dash,dot],
-    q: [dash,dash,dot,dash],
-    r: [dot,dash,dot],
-    s: [dot,dot,dot],
-    t: [dash],
-    u: [dot,dot,dash],
-    v: [dot,dot,dot,dash],
-    w: [dot,dash,dash],
-    x: [dash,dot,dot,dash],
-    y: [dash,dot,dash,dash],
-    z: [dash,dash,dot,dot],
-    1: [dot,dash,dash,dash,dash],
-    2: [dot,dot,dash,dash,dash],
-    3: [dot,dot,dot,dash,dash],
-    4: [dot,dot,dot,dot,dash],
-    5: [dot,dot,dot,dot,dot],
-    6: [dash,dot,dot,dot,dot],
-    7: [dash,dash,dot,dot,dot],
-    8: [dash,dash,dash,dot,dot],
-    9: [dash,dash,dash,dash,dot],
-    0: [dash,dash,dash,dash,dash],
-    space: [divide]
-};
+class MorseCodeTranslator
+{
+    /**
+     * Constructor: setup character to morse code map
+     */
+    constructor() {
+        this._morse = {
+            a: [".","-"],
+            b: ["-",".",".","."],
+            c: ["-",".","-","."],
+            d: ["-",".","."],
+            e: ["."],
+            f: [".",".","-","."],
+            g: ["-","-","."],
+            h: [".",".",".","."],
+            i: [".","."],
+            j: [".","-","-","-"],
+            k: ["-",".","-"],
+            l: [".","-",".","."],
+            m: ["-","-"],
+            n: ["-","."],
+            o: ["-","-","-"],
+            p: [".","-","-","."],
+            q: ["-","-",".","-"],
+            r: [".","-","."],
+            s: [".",".","."],
+            t: ["-"],
+            u: [".",".","-"],
+            v: [".",".",".","-"],
+            w: [".","-","-"],
+            x: ["-",".",".","-"],
+            y: ["-",".","-","-"],
+            z: ["-","-",".","."],
+            1: [".","-","-","-","-"],
+            2: [".",".","-","-","-"],
+            3: [".",".",".","-","-"],
+            4: [".",".",".",".","-"],
+            5: [".",".",".",".","."],
+            6: ["-",".",".",".","."],
+            7: ["-","-",".",".","."],
+            8: ["-","-","-",".","."],
+            9: ["-","-","-","-","."],
+            0: ["-","-","-","-","-"],
+            space: ["/"]
+        };
+    }
 
-module.exports = {
-    translate: function (str) {
-        var chars = str
+    /**
+     * Translate a string of english to a string of morse code
+     * @param  {string} value
+     * @return {string}
+     */
+    translate(value)
+    {
+        let chars = value
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
             .split(''),
             morsecode = [];
 
-        for(i = 0; i < chars.length; i++) {
+        for(let i = 0; i < chars.length; i++) {
             if(chars[i] == ' '){
-                morsecode.push(morse.space.join(''));
+                morsecode.push(this._morse.space.join(''));
             } else {
-                morsecode.push(morse[chars[i]].join(''));
+                morsecode.push(this._morse[chars[i]].join(''));
             }
         }
 
         return morsecode.join(' ');
     }
-};
+}
