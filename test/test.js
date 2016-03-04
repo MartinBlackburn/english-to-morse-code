@@ -32,4 +32,8 @@ describe('English to Morse Code', function () {
     it('Translates the string "abcdefghijklmnopqrstuvwxyz0123456789" into Morse Code', function() {
         assert.equal(app.translate('abcdefghijklmnopqrstuvwxyz0123456789'), '.- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. ----- .---- ..--- ...-- ....- ..... -.... --... ---.. ----.');
     });
+
+    it('Multiple spaces are removed', function() {
+        assert.equal(app.translate('hello   world'), '.... . .-.. .-.. --- / .-- --- .-. .-.. -..');
+    });
 });

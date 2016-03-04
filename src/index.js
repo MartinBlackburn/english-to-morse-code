@@ -57,6 +57,7 @@ class MorseCodeTranslator
         let chars = value
             .toLowerCase()
             .replace(/[^a-z0-9\s]/g, '')
+            .replace(/  +/g, ' ')
             .split(''),
             morsecode = [];
 
