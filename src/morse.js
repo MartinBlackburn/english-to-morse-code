@@ -1,3 +1,7 @@
+const dot = '.';
+const dash = '-';
+const divide = '/';
+
 export default {
     a: [dot,dash],
     b: [dash,dot,dot,dot],
