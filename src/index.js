@@ -46,7 +46,7 @@ module.exports = {
     translate: function (str) {
         var chars = str
             .toLowerCase()
-            .replace(/[^A-Za-z0-9\s]/g, '')
+            .replace(/[^a-z0-9\s]/g, '')
             .split(''),
             morsecode = [];
 

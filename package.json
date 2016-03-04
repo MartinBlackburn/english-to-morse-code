@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/MartinBlackburn/english-to-morse-code#readme",
   "devDependencies": {
+    "babel-core": "^6.6.4",
     "mocha": "^2.4.5"
   }
 }
