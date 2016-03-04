@@ -71,3 +71,5 @@ class MorseCodeTranslator
         return morsecode.join(' ');
     }
 }
+
+module.exports = new MorseCodeTranslator();
