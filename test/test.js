@@ -28,4 +28,8 @@ describe('English to Morse Code', function () {
     it('Translate the string "1234567890" into Morse Code', function() {
         assert.equal(app.translate('1234567890'), '.---- ..--- ...-- ....- ..... -.... --... ---.. ----. -----');
     });
+
+    it('Translates the string "abcdefghijklmnopqrstuvwxyz0123456789" into Morse Code', function() {
+        assert.equal(app.translate('abcdefghijklmnopqrstuvwxyz0123456789'), '.- -... -.-. -.. . ..-. --. .... .. .--- -.- .-.. -- -. --- .--. --.- .-. ... - ..- ...- .-- -..- -.-- --.. ----- .---- ..--- ...-- ....- ..... -.... --... ---.. ----.');
+    });
 });
