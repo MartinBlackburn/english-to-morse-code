@@ -1,6 +1,6 @@
 import morse from './morse';
 
-export default {
+class App {
     translate(str) {
         let chars = str
             .toLowerCase()
@@ -18,4 +18,6 @@ export default {
 
         return morsecode.join(' ');
     }
-};
+}
+
+export default App;
