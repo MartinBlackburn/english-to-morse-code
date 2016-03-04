@@ -1,7 +1,7 @@
 var dot = '.',
     dash = '-',
     divide = '/';
-    
+
 var morse = {
     a: [dot,dash],
     b: [dash,dot,dot,dot],
@@ -29,6 +29,16 @@ var morse = {
     x: [dash,dot,dot,dash],
     y: [dash,dot,dash,dash],
     z: [dash,dash,dot,dot],
+    1: [dot,dash,dash,dash,dash],
+    2: [dot,dot,dash,dash,dash],
+    3: [dot,dot,dot,dash,dash],
+    4: [dot,dot,dot,dot,dash],
+    5: [dot,dot,dot,dot,dot],
+    6: [dash,dot,dot,dot,dot],
+    7: [dash,dash,dot,dot,dot],
+    8: [dash,dash,dash,dot,dot],
+    9: [dash,dash,dash,dash,dot],
+    0: [dash,dash,dash,dash,dash],
     space: [divide]
 };
 
@@ -36,7 +46,7 @@ module.exports = {
     translate: function (str) {
         var chars = str
             .toLowerCase()
-            .replace(/[^A-Za-z\s]/g, '')
+            .replace(/[^A-Za-z0-9\s]/g, '')
             .split(''),
             morsecode = [];
 
